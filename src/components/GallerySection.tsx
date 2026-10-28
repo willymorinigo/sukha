@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { GALLERY, GalleryItem } from '../data/sukhaData';
 import { Maximize2, X, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
+import {
+  HandDrawnLeaf,
+  SunburstAccent,
+  DotCluster,
+  CornerOrganicDecoration,
+} from './OrganicBackgroundAccents';
 
 export const GallerySection: React.FC = () => {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
@@ -22,7 +28,12 @@ export const GallerySection: React.FC = () => {
   };
 
   return (
-    <section id="galeria" className="py-20 bg-[#FCFAED] text-[#1C2A29] relative">
+    <section id="galeria" className="py-20 bg-[#FCFAED] text-[#1C2A29] relative overflow-hidden">
+      {/* Background Graphic Accents */}
+      <CornerOrganicDecoration position="top-left" theme="teal" opacity={0.20} />
+      <CornerOrganicDecoration position="bottom-right" theme="terracotta" opacity={0.22} />
+      <SunburstAccent className="absolute bottom-20 left-10 w-24 h-24" opacity={0.16} color="terracotta" />
+      <DotCluster className="absolute top-1/2 right-8 w-20 h-20" opacity={0.22} color="teal" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">

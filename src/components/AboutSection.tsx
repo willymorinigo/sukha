@@ -1,9 +1,22 @@
 import React from 'react';
 import { Heart, Stethoscope, School, CheckCircle2 } from 'lucide-react';
+import {
+  HandDrawnLeaf,
+  FluidOrganicCurve,
+  DotCluster,
+  SunburstAccent,
+  CornerOrganicDecoration,
+} from './OrganicBackgroundAccents';
 
 export const AboutSection: React.FC = () => {
   return (
     <section id="nosotros" className="py-20 bg-[#FCFAED] text-[#1C2A29] relative overflow-hidden">
+      {/* Organic Background Graphic Elements (10% to 25% Opacity) */}
+      <CornerOrganicDecoration position="top-left" theme="terracotta" opacity={0.22} />
+      <CornerOrganicDecoration position="bottom-right" theme="teal" opacity={0.20} />
+      <SunburstAccent className="absolute top-12 right-12 w-20 h-20 text-[#DE7242]" opacity={0.18} color="terracotta" />
+      <DotCluster className="absolute top-1/3 left-6 w-24 h-24" opacity={0.25} color="teal" />
+
       {/* Decorative ambient background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#ADD8D7]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FCCBB5]/20 rounded-full blur-3xl pointer-events-none" />

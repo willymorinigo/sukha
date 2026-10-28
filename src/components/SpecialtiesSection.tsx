@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { SPECIALTIES, Specialty } from '../data/sukhaData';
 import {
+  HandDrawnLeaf,
+  DotCluster,
+  CornerOrganicDecoration,
+  TranslucentBotanicalSilhouette,
+} from './OrganicBackgroundAccents';
+import {
   MessageSquareHeart,
   Activity,
   Music,
@@ -65,7 +71,12 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
   };
 
   return (
-    <section id="especialidades" className="py-20 bg-white text-[#1C2A29] relative">
+    <section id="especialidades" className="py-20 bg-white text-[#1C2A29] relative overflow-hidden">
+      {/* Subtle background botanical accents */}
+      <CornerOrganicDecoration position="top-right" theme="terracotta" opacity={0.18} />
+      <CornerOrganicDecoration position="bottom-left" theme="teal" opacity={0.18} />
+      <TranslucentBotanicalSilhouette className="absolute top-1/4 -left-12 w-48 h-48" opacity={0.12} color="terracotta" />
+      <DotCluster className="absolute bottom-12 right-12 w-28 h-28" opacity={0.20} color="teal" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

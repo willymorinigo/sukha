@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { TESTIMONIALS, Testimonial, SUKHA_INFO } from '../data/sukhaData';
 import { Star, CheckCircle, Quote, Plus, X } from 'lucide-react';
+import {
+  HandDrawnLeaf,
+  DotCluster,
+  CornerOrganicDecoration,
+} from './OrganicBackgroundAccents';
 
 export const TestimonialsSection: React.FC = () => {
   const [testimonialsList, setTestimonialsList] = useState<Testimonial[]>(TESTIMONIALS);
@@ -45,6 +50,10 @@ export const TestimonialsSection: React.FC = () => {
 
   return (
     <section id="testimonios" className="py-20 bg-white text-[#1C2A29] relative overflow-hidden">
+      {/* Background Graphic Accents */}
+      <CornerOrganicDecoration position="top-right" theme="terracotta" opacity={0.18} />
+      <CornerOrganicDecoration position="bottom-left" theme="teal" opacity={0.18} />
+      <DotCluster className="absolute top-10 left-12 w-20 h-20" opacity={0.22} color="terracotta" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         {/* Header & Overall Rating */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

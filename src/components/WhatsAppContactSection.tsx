@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { SUKHA_INFO, SPECIALTIES } from '../data/sukhaData';
 import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import {
+  HandDrawnLeaf,
+  DotCluster,
+  CornerOrganicDecoration,
+  SunburstAccent,
+} from './OrganicBackgroundAccents';
 
 interface WhatsAppContactSectionProps {
   initialSpecialtyName?: string;
@@ -99,7 +105,12 @@ export const WhatsAppContactSection: React.FC<WhatsAppContactSectionProps> = ({
   };
 
   return (
-    <section id="contacto" className="py-20 bg-white text-[#1C2A29] relative">
+    <section id="contacto" className="py-20 bg-white text-[#1C2A29] relative overflow-hidden">
+      {/* Background Graphic Accents */}
+      <CornerOrganicDecoration position="top-left" theme="terracotta" opacity={0.20} />
+      <CornerOrganicDecoration position="bottom-right" theme="teal" opacity={0.20} />
+      <SunburstAccent className="absolute top-16 right-16 w-20 h-20" opacity={0.16} color="terracotta" />
+      <DotCluster className="absolute bottom-16 left-12 w-24 h-24" opacity={0.22} color="teal" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12">

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { SPECIALTIES } from '../data/sukhaData';
 import { Briefcase, Upload, FileCheck, CheckCircle2, AlertCircle, X, Sparkles } from 'lucide-react';
+import {
+  HandDrawnLeaf,
+  DotCluster,
+  CornerOrganicDecoration,
+} from './OrganicBackgroundAccents';
 
 export const CareersSection: React.FC = () => {
   const [candidateName, setCandidateName] = useState('');
@@ -88,7 +93,11 @@ export const CareersSection: React.FC = () => {
   };
 
   return (
-    <section id="busquedas" className="py-20 bg-[#FCFAED] text-[#1C2A29] relative">
+    <section id="busquedas" className="py-20 bg-[#FCFAED] text-[#1C2A29] relative overflow-hidden">
+      {/* Background Graphic Accents */}
+      <CornerOrganicDecoration position="top-left" theme="teal" opacity={0.20} />
+      <CornerOrganicDecoration position="bottom-right" theme="terracotta" opacity={0.20} />
+      <DotCluster className="absolute top-1/3 right-10 w-24 h-24" opacity={0.22} color="terracotta" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
