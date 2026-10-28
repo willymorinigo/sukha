@@ -1,0 +1,6 @@
+{
+  "name": "Sukha - Centro de Desarrollo Infantil",
+  "description": "Espacio de acompañamiento profesional, cercano y humano en el desarrollo infantil en City Bell. Equipos interdisciplinarios, estimulación temprana y rehabilitación.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
